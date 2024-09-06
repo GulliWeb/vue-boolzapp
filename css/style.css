@@ -33,18 +33,18 @@ body {
     padding-left: 5px;
   }
 
-  .profile-info figure img{
+  .profile-info figure img, #chat-cards .card .left figure img{
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
       border: 1px solid white; 
       transition: box-shadow 0.3s ease; 
   }
 
-  .profile-info figure img:hover{
+  .profile-info figure img:hover , #chat-cards .card .left figure img:hover{
     cursor: pointer;
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
   }
 
-  .profile-info figure img:active {
+  .profile-info figure img:active, #chat-cards .card .left figure img:active{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transform: scale(0.96); 
   }
@@ -129,6 +129,29 @@ body {
     margin-top: 10px;
   }
 
+  #chat-cards .card:hover{
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
+  }
+
+  #chat-cards .card:active{
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  #chat-cards .card .left{
+    margin-left: 10px;
+    display: flex;
+    flex-basis: 80%;
+  }
+
+  #chat-cards .card .right{
+    margin-right: 10px;
+    display: flex;
+    justify-content: end;
+    flex-basis: 20%;
+  }
+
   #chat-cards .card{
     height: 70px;
     display: flex;
@@ -137,9 +160,26 @@ body {
     border: 1px solid lightgray;
   }
 
+  #chat-cards .card .contact-info{
+    margin-left: 15px;
+  }
 
+  #chat-cards .card h3{
+    font-weight: normal;
+    font-size: 18px;
+  }
 
+  #chat-cards .card p{
+    margin-top: 3px;
+    font-size: 12px;
+    color: rgb(177, 177, 177);
+  }
 
+  #chat-cards .card .msg-time{
+    display: flex;
+    font-size: 12px;
+    color: rgb(177, 177, 177);
+  }
 
 
 
