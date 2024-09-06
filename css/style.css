@@ -98,6 +98,45 @@ body {
     cursor: pointer;
   }
 
+  /* MAIN */
+  .search{
+    margin: 5px 10px;
+  }
+
+  .search .items button:hover{
+    cursor: pointer;
+  }
+
+  .search .items button{
+    padding: 5px 15px;
+    border-radius: 5px white;
+    color: gray;
+  }
+
+
+  .search .items{
+    display: flex;
+  }
+
+  .search .items input{
+    padding-left: 10px;
+    margin-left: 5px;
+    width: 100%;
+  }
+
+  /* Section chat cards */
+  #chat-cards{
+    margin-top: 10px;
+  }
+
+  #chat-cards .card{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid lightgray;
+  }
+
 
 
 
