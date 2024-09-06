@@ -2,10 +2,35 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Lato', sans-serif;
-    height: 100vh;
+    height: calc(100vh - 20px);
     background: linear-gradient(to bottom, rgb(66, 148, 136) 20%, rgb(206, 206, 197) 20%);
   }
+
+  /* Layout container */
+  .container{
+    margin: 10px auto;
+    max-width: 1500px;
+    height: 100%;
+    border: 1px dashed black;
+  }
+
+  /* Section layout */
+  #s-wrapper{
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* LEFT */
+
+  #s-left{
+    flex-basis: 35%;
+    flex-grow: 0;
+    border: 1px dashed black;
+  }
+
