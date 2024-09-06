@@ -127,7 +127,7 @@ body {
   /* Section chat cards */
   #chat-cards{
     margin-top: 10px;
-    max-height: 80vh;  
+    max-height: 90vh;  
     overflow-y: auto;
     overflow-x: hidden
   }
