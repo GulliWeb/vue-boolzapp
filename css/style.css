@@ -5,10 +5,48 @@
     box-sizing: border-box;
 }
 
+/* Generics */
 body {
     font-family: 'Lato', sans-serif;
     height: calc(100vh - 20px);
     background: linear-gradient(to bottom, rgb(66, 148, 136) 20%, rgb(206, 206, 197) 20%);
+  }
+
+  figure{
+    max-width: 40px;
+  }
+
+  img{
+    max-width: 100%;
+    border-radius: 50%;
+  }
+
+  .profile-name{
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 5px;
+  }
+
+  .profile-info{
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+  }
+
+  .profile-info figure img{
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+      border: 1px solid white; 
+      transition: box-shadow 0.3s ease; 
+  }
+
+  .profile-info figure img:hover{
+    cursor: pointer;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+  }
+
+  .profile-info figure img:active {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transform: scale(0.96); 
   }
 
   /* Layout container */
@@ -27,10 +65,44 @@ body {
   }
 
   /* LEFT */
-
   #s-left{
     flex-basis: 35%;
     flex-grow: 0;
+    background-color: #fff;
     border: 1px dashed black;
   }
+
+  #nav-left{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(234, 234, 234);
+  }
+
+  .icon{
+    padding-right: 5px;
+  }
+
+  .icon i {
+    color: rgb(177, 177, 177);
+    margin-right: 10px;
+}
+  .icon i:hover{
+    color: lightgray;
+    cursor: pointer;
+  }
+
+  .icon i:active{
+    color: rgb(177, 177, 177);
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
 
