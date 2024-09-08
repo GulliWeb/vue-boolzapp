@@ -8,7 +8,7 @@
 /* Generics */
 body {
     font-family: 'Lato', sans-serif;
-    height: calc(100vh - 20px);
+    height: calc(100vh - 10px);
     background: linear-gradient(to bottom, rgb(66, 148, 136) 20%, rgb(206, 206, 197) 20%);
   }
 
@@ -206,7 +206,8 @@ body {
 /* SECTION MAIN CHATS */
 #main-chat{
     position: relative;
-    height: calc(100% - 50px)
+    height: calc(100% - 50px);
+    overflow-y: auto;
 }
 
 #main-chat footer{
