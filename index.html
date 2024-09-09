@@ -49,7 +49,7 @@
 
                 <!-- SECTION CHAT CARDS -->
                 <section id="chat-cards">
-                    <div class="card" v-for="contact in contacts">
+                    <div class="card" v-for="(contact, index) in contacts" :key="index" @click="currentContact(contact)">
                         <div class="left">
                             <figure>
                                 <img :src=contact.avatar alt="contact profile-photo">
@@ -89,12 +89,14 @@
                 </header>
 
                 <!-- SECTION MAIN CHATS  -->
-                <section id="main-chat">
+                <section id="main-chat" v-if="selectedContact">
                     <!-- Messages -->
 
-                    <div class="messages-wrapper received">
-                        <div class="messages-box" v-for="(msg, index) in contacts.message">
-                            {{ msg.messages}}
+                    <div class="messages-wrapper">
+                        <div class="messages-box" v-for="(msg, index) in selectedContact.messages" :key="index" :class="{sent : msg.status === 'sent', received : msg.status === 'received'}">
+                                 <p>
+                                    {{ msg.message }}
+                                 </p>
                         </div>
                     </div>
                     

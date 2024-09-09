@@ -212,27 +212,29 @@ body {
 
 /* Messages BOX */
 .messages-wrapper{
+    flex-direction: column;
     margin: 50px auto;
     max-width: 90%;
     display: flex;
-    align-items: end;
+    align-items: start;
 }
 
 /* Dynamic classes messages */
 .sent{
-    justify-content: flex-start;
+    align-self: flex-start;
+    background-color: #dcf8c6
 
 }
 
 .received{
-    justify-content: flex-end;
+    align-self: flex-end;
+    background-color: #ffffff
 
 }
 
 .messages-box{
     display: flex;
     justify-content: center;
-    background-color: #dcf8c6; 
     padding: 10px 15px; 
     border-radius: 15px;
     max-width: 60%; 

@@ -13,7 +13,13 @@ const { createApp } = Vue;
                 { "name": "Claudia", "avatar": "./img/avatar_io.png", "visible": true, "messages": [ { "date": "10/01/2020 15:30:55", "message": "Ciao Claudia, hai novità?", "status": "sent" }, { "date": "10/01/2020 15:50:00", "message": "Non ancora", "status": "received" }, { "date": "10/01/2020 15:51:00", "message": "Nessuna nuova, buona nuova", "status": "sent" } ] },
                 { "name": "Federico", "avatar": "./img/avatar_7.png", "visible": true, "messages": [ { "date": "10/01/2020 15:30:55", "message": "Fai gli auguri a Martina che è il suo compleanno!", "status": "sent" }, { "date": "10/01/2020 15:50:00", "message": "Grazie per avermelo ricordato, le scrivo subito!", "status": "received" } ] },
                 { "name": "Davide", "avatar": "./img/avatar_8.png", "visible": true, "messages": [ { "date": "10/01/2020 15:30:55", "message": "Ciao, andiamo a mangiare la pizza stasera?", "status": "received" }, { "date": "10/01/2020 15:50:00", "message": "No, l'ho già mangiata ieri, ordiniamo sushi!", "status": "sent" }, { "date": "10/01/2020 15:51:00", "message": "OK!!", "status": "received" } ] }
-            ]            
+            ], 
+            selectedContact: null,          
+        }
+    },
+    methods: {
+        currentContact(contact){
+            this.selectedContact = contact
         }
     }
  }).mount('#app')
