@@ -90,6 +90,14 @@
 
                 <!-- SECTION MAIN CHATS  -->
                 <section id="main-chat">
+                    <!-- Messages -->
+
+                    <div class="messages-wrapper received">
+                        <div class="messages-box" v-for="(msg, index) in contacts.message">
+                            {{ msg.messages}}
+                        </div>
+                    </div>
+                    
                     <footer>
                         <div class="content">
                             <i class="fas fa-face-smile"></i>
