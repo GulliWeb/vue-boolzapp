@@ -317,5 +317,79 @@ body {
   font-size: 10px;
 }
 
+/* DARK MODE */
 
+.dark-mode {
+  background: linear-gradient(to bottom, rgb(11, 57, 50) 20%, #000 20%);
+  color: #fff; 
+}
 
+.dark-mode header #nav-left, .dark-mode header #nav-right{
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode #s-left {
+  background-color: rgb(40, 40, 41); 
+}
+
+.dark-mode #main-chat {
+  background-color: rgb(25, 25, 26);
+}
+
+.dark-mode #chat-cards .card:hover {
+  background-color: #333; 
+}
+
+.dark-mode .search input {
+  background-color: #444; 
+  color: #fff; 
+  border: 1px solid #666; 
+}
+
+.dark-mode .search button {
+  background-color: #999;
+  color: #555; 
+}
+
+.dark-mode .messages-box.sent {
+  background-color: rgb(32, 80, 70); 
+}
+
+.dark-mode .messages-box.received {
+  background-color: #555; 
+}
+
+.dark-mode footer .content {
+  background-color: #333; 
+}
+
+.dark-mode footer .content input {
+  background-color: #555; 
+  color: white;
+}
+
+.dark-mode .profile-info img {
+  border: 2px solid #fff; 
+}
+
+.dark-mode .delete-message{
+  background-color: #333;
+  color: #888;
+}
+
+.dark-mode figure img {
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3); 
+  border: 1px solid #333; 
+  transition: box-shadow 0.3s ease; 
+}
+
+.dark-mode figure img:hover {
+  cursor: pointer;
+  box-shadow: 0 16px 32px rgba(255, 255, 255, 0.4);
+}
+
+.dark-mode figure img:active {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); 
+  transform: scale(0.96); 
+}
