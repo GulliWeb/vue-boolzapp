@@ -42,8 +42,8 @@
                <main>
                 <section class="search">
                     <div class="items">
-                        <button class="fas fa-search"></button>
-                        <input type="text" id="txtSearch" placeholder="Cerca o inizia una nuova chat">
+                        <button class="fas fa-search" @click="filterContacts()"></button>
+                        <input type="text" id="txtSearch" placeholder="Cerca o inizia una nuova chat" v-model="searchContacts">
                     </div>
                 </section>
 

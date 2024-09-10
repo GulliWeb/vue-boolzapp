@@ -15,16 +15,20 @@ const { createApp } = Vue;
                 { "name": "Davide", "avatar": "./img/avatar_8.png", "visible": true, "messages": [ { "date": "10/01/2020 15:30:55", "message": "Ciao, andiamo a mangiare la pizza stasera?", "status": "received" }, { "date": "10/01/2020 15:50:00", "message": "No, l'ho già mangiata ieri, ordiniamo sushi!", "status": "sent" }, { "date": "10/01/2020 15:51:00", "message": "OK!!", "status": "received" } ] }
             ], 
             selectedContact : null ,
-            newMessage: "",       
+            newMessage: "",  
+            searchContacts,
+            filteredContacts: [],     
         }
     },
     mounted() {
         this.selectedContact = this.contacts[0];
+        this.filteredContacts = this.contacts;
     },
     methods: {
         currentContact(contact){
             this.selectedContact = contact
         },
+
         // Aggiungo il nuovo messaggio digitato dall'uttente 
         setNewMessages(){
             if (this.newMessage.trim() !== "") {
@@ -47,7 +51,12 @@ const { createApp } = Vue;
                 }, 1000)
             }
         },
-    }
+
+        // Metodo che mi filtra i contatti contenenti le lettere inserite nella search bar
+        filterContacts(){
+            this.filterContacts = this.contact.filter(contact => contact.name.toLowerCase().startsWith(this.searchContacts.toLowerCase()))
+        }
+    },
  }).mount('#app')
 
 
