@@ -112,10 +112,11 @@ const { createApp } = Vue;
             return `${hours.padStart(2, '0')}:${minutes.padStart(2, '0')}`;  
         },
 
-        // Funzione che prende l'ultimo messaggio della chat 
+        // Funzione che prende l'ultimo messaggio e relativo orario della chat 
         getLastMessage(contact) {
             if (contact.messages.length > 0) {
-                return contact.messages[contact.messages.length - 1].message;
+                const lastMessage = contact.messages[contact.messages.length - 1];
+                return `${lastMessage.message} (${this.formatTime(lastMessage.date)})`;
             }
             return 'Nessun messaggio recente';
         },
