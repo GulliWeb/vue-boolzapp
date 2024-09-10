@@ -35,8 +35,17 @@ const { createApp } = Vue;
                   }
                   this.selectedContact.messages.push(messageObj) 
             }
-            this.newMessage = "";  
-        }
+            this.newMessage = ""; 
+            // Aggiungo il messaggio di risposta un secondo dopo che l'utente invia il messaggio 
+            setTimeout(() =>{
+                const responseMessageObg = {
+                    date: new Date().toLocaleString(),
+                    message: 'Ok!',
+                    status: 'received'  
+                }
+                this.selectedContact.messages.push(responseMessageObg)
+            }, 1000)
+        },
     }
  }).mount('#app')
 
