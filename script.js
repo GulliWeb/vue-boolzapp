@@ -27,24 +27,25 @@ const { createApp } = Vue;
         },
         // Aggiungo il nuovo messaggio digitato dall'uttente 
         setNewMessages(){
-            if (!this.newMessage.trim() == "") {
+            if (this.newMessage.trim() !== "") {
                 const messageObj = {
                     date: new Date().toLocaleString(),
                     message: this.newMessage,
                     status: 'sent'          
                   }
                   this.selectedContact.messages.push(messageObj) 
+                  this.newMessage = ""; 
+                  
+                  // Aggiungo il messaggio di risposta un secondo dopo che l'utente invia il messaggio 
+                  setTimeout(() =>{
+                    const responseMessageObg = {
+                        date: new Date().toLocaleString(),
+                        message: 'Ok!',
+                        status: 'received'  
+                    }
+                    this.selectedContact.messages.push(responseMessageObg)
+                }, 1000)
             }
-            this.newMessage = ""; 
-            // Aggiungo il messaggio di risposta un secondo dopo che l'utente invia il messaggio 
-            setTimeout(() =>{
-                const responseMessageObg = {
-                    date: new Date().toLocaleString(),
-                    message: 'Ok!',
-                    status: 'received'  
-                }
-                this.selectedContact.messages.push(responseMessageObg)
-            }, 1000)
         },
     }
  }).mount('#app')
