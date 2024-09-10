@@ -73,10 +73,10 @@
                     <nav id="nav-right">
                         <div class="profile-info">
                             <figure>
-                                <img src="img/avatar_1.png" alt="Profile photo">
+                                <img :src="selectedContact ? selectedContact.avatar : contacts[0].avatar" alt="Profile photo">
                             </figure>
-                            <div class="profile-access">
-                                <h3 style="margin-left: 0;" class="profile-name">Michele</h3>
+                            <div  v-if="selectedContact"class="profile-access">
+                                <h3 style="margin-left: 0;" class="profile-name">{{ selectedContact.name }}</h3>
                                 <p style="font-size: 12px; color: rgb(177, 177, 177);">Ultimo accesso oggi alle 12:00</p>
                             </div>
                         </div>
@@ -94,9 +94,9 @@
 
                     <div class="messages-wrapper">
                         <div class="messages-box" v-for="(msg, index) in selectedContact.messages" :key="index" :class="{sent : msg.status === 'sent', received : msg.status === 'received'}">
-                                 <p>
-                                    {{ msg.message }}
-                                 </p>
+                            <p> 
+                                {{ msg.message }}
+                            </p>
                         </div>
                     </div>
                     
