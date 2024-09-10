@@ -233,6 +233,7 @@ body {
 }
 
 .messages-box{
+  position: relative;
     margin-top: 1px;
     display: flex;
     justify-content: center;
@@ -243,6 +244,10 @@ body {
     line-height: 20px;
     word-wrap: break-word; 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+.messages-box:hover{
+  cursor: pointer;
 }
 
 #main-chat footer{
@@ -279,6 +284,27 @@ body {
 
 #main-chat footer i:active{
     color: rgb(134, 134, 134);
+}
+
+/* Deleted messages */
+.delete-message{
+  z-index: 1000;
+  position: absolute;
+  top: 15px;
+  right: -100px;
+  padding: 20px 10px;
+  border-radius: 12px;
+  background-color: #fff;
+  color: gray;
+  border: 1px solid red;
+}
+
+.delete-message:hover{
+  background-color: lightgray;
+}
+
+.delete-message :active{
+  background-color: #fff;
 }
 
 

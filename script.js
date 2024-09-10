@@ -17,6 +17,8 @@ const { createApp } = Vue;
             selectedContact : null ,
             newMessage: "",  
             searchContacts : "",
+            messageIndex: null,
+            show: false,
         }
     },
     mounted() {
@@ -25,6 +27,7 @@ const { createApp } = Vue;
     },
 
     computed: {
+        // Computed per mostrare solo i contatti che iniziano per la stessa lettere digitata dall'utente nella search bar con aggiornamento reattivo
         filteredContacts() {
             if (this.searchContacts) {
                 return this.contacts.filter(contact => 
@@ -37,6 +40,26 @@ const { createApp } = Vue;
     },
 
     methods: {
+        // Metodo per visualizzare e nascondere l'opzione di cancellare i messaggi
+        toggleDelete(index) {
+            if (this.messageIndex === index) {
+                this.show = !this.show;
+                this.messageIndex = null; 
+            } else {
+                this.show = true;
+                this.messageIndex = index;
+            }
+        },
+
+        // Metodo per cancellare i messaggi (solo quelli inviati dall'utente)
+        deleteMessage() {
+            if (this.selectedContact && this.messageIndex !== null) {
+                this.selectedContact.messages.splice(this.messageIndex, 1);
+                this.show = false;
+                this.messageIndex = null;
+            }
+        },
+
         currentContact(contact){
             this.selectedContact = contact
         },
