@@ -93,10 +93,15 @@
                     <!-- Messages -->
                     <div class="messages-wrapper">
                         <div class="messages-box" v-for="(msg, index) in selectedContact.messages" :key="index" :class="msg.status" @click="toggleDelete(index)">
+                            <div class="msg-time">
+                                {{ formatTime(msg.date) }}
+                                
+                            </div>
                             <div class="delete-message" v-if="show && messageIndex === index && msg.status === 'sent'" @click.stop="deleteMessage">
+                                
                                 <p>Delete message</p>
                             </div>
-                            <p> 
+                            <p style="text-align: start;"> 
                                 {{ msg.message }}
                             </p>
                         </div>

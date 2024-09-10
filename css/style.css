@@ -234,10 +234,11 @@ body {
 
 .messages-box{
   position: relative;
+  width: 30%;
     margin-top: 1px;
     display: flex;
-    justify-content: center;
-    padding: 10px 15px; 
+    justify-content: start;
+    padding: 10px 25px; 
     border-radius: 15px;
     max-width: 60%; 
     font-size: 14px;
@@ -307,6 +308,14 @@ body {
   background-color: #fff;
 }
 
+/* Time messages is sent */
+.msg-time{
+  position: absolute;
+  right: 7px;
+  bottom: 1px;
+  color: gray;
+  font-size: 10px;
+}
 
 
 

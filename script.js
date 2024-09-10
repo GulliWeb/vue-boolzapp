@@ -86,6 +86,13 @@ const { createApp } = Vue;
                 }, 1000)
             }
         },
+
+        formatTime(dateString) {
+            // Estrai solo l'ora e i minuti dalla stringa di data
+            const timePart = dateString.split(' ')[1];  
+            const [hours, minutes] = timePart.split(':');  
+            return `${hours.padStart(2, '0')}:${minutes.padStart(2, '0')}`;  
+        },
     },
  }).mount('#app')
 
