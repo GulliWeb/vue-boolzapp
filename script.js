@@ -14,7 +14,8 @@ const { createApp } = Vue;
                 { "name": "Federico", "avatar": "./img/avatar_7.png", "visible": true, "messages": [ { "date": "10/01/2020 15:30:55", "message": "Fai gli auguri a Martina che è il suo compleanno!", "status": "sent" }, { "date": "10/01/2020 15:50:00", "message": "Grazie per avermelo ricordato, le scrivo subito!", "status": "received" } ] },
                 { "name": "Davide", "avatar": "./img/avatar_8.png", "visible": true, "messages": [ { "date": "10/01/2020 15:30:55", "message": "Ciao, andiamo a mangiare la pizza stasera?", "status": "received" }, { "date": "10/01/2020 15:50:00", "message": "No, l'ho già mangiata ieri, ordiniamo sushi!", "status": "sent" }, { "date": "10/01/2020 15:51:00", "message": "OK!!", "status": "received" } ] }
             ], 
-            selectedContact : null          
+            selectedContact : null ,
+            newMessage: "",       
         }
     },
     mounted() {
@@ -23,6 +24,18 @@ const { createApp } = Vue;
     methods: {
         currentContact(contact){
             this.selectedContact = contact
+        },
+        // Aggiungo il nuovo messaggio digitato dall'uttente 
+        setNewMessages(){
+            if (!this.newMessage.trim() == "") {
+                const messageObj = {
+                    date: new Date().toLocaleString(),
+                    message: this.newMessage,
+                    status: 'sent'          
+                  }
+                  this.selectedContact.messages.push(messageObj) 
+            }
+            this.newMessage = "";  
         }
     }
  }).mount('#app')

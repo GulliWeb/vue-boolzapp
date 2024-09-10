@@ -93,7 +93,7 @@
                     <!-- Messages -->
 
                     <div class="messages-wrapper">
-                        <div class="messages-box" v-for="(msg, index) in selectedContact.messages" :key="index" :class="{sent : msg.status === 'sent', received : msg.status === 'received'}">
+                        <div class="messages-box" v-for="(msg, index) in selectedContact.messages" :key="index" :class="msg.status">
                             <p> 
                                 {{ msg.message }}
                             </p>
@@ -103,7 +103,7 @@
                     <footer>
                         <div class="content">
                             <i class="fas fa-face-smile"></i>
-                            <input type="text" id="footerTxt" placeholder="Scrivi un messaggio">
+                            <input type="text" id="footerTxt" v-model="newMessage" @keyup.enter="setNewMessages()" placeholder="Scrivi un messaggio">
                             <i class="fas fa-microphone"></i>
                         </div>
                     </footer>
