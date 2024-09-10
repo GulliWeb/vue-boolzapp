@@ -42,14 +42,14 @@
                <main>
                 <section class="search">
                     <div class="items">
-                        <button class="fas fa-search" @click="filterContacts()"></button>
+                        <button class="fas fa-search"></button>
                         <input type="text" id="txtSearch" placeholder="Cerca o inizia una nuova chat" v-model="searchContacts">
                     </div>
                 </section>
 
                 <!-- SECTION CHAT CARDS -->
                 <section id="chat-cards">
-                    <div class="card" v-for="(contact, index) in contacts" :key="index" @click="currentContact(contact)">
+                    <div class="card" v-for="(contact, index) in filteredContacts" :key="index" @click="currentContact(contact)">
                         <div class="left">
                             <figure>
                                 <img :src=contact.avatar alt="contact profile-photo">

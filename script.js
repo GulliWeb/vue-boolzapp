@@ -16,14 +16,26 @@ const { createApp } = Vue;
             ], 
             selectedContact : null ,
             newMessage: "",  
-            searchContacts,
-            filteredContacts: [],     
+            searchContacts : "",
         }
     },
     mounted() {
         this.selectedContact = this.contacts[0];
         this.filteredContacts = this.contacts;
     },
+
+    computed: {
+        filteredContacts() {
+            if (this.searchContacts) {
+                return this.contacts.filter(contact => 
+                    contact.name.toLowerCase().includes(this.searchContacts.toLowerCase())
+                );
+            } else {
+                return this.contacts;
+            }
+        }
+    },
+
     methods: {
         currentContact(contact){
             this.selectedContact = contact
@@ -51,11 +63,6 @@ const { createApp } = Vue;
                 }, 1000)
             }
         },
-
-        // Metodo che mi filtra i contatti contenenti le lettere inserite nella search bar
-        filterContacts(){
-            this.filterContacts = this.contact.filter(contact => contact.name.toLowerCase().startsWith(this.searchContacts.toLowerCase()))
-        }
     },
  }).mount('#app')
 
