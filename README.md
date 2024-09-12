@@ -2,7 +2,7 @@
 
 ## Description
 
-BoolzApp is a clone of WhatsApp developed using Vue.js as part of the Boolean bootcamp. This web application replicates the core functionalities of WhatsApp, allowing users to manage contacts, send and receive messages, and interact with a user-friendly chat interface.
+Vue BoolzApp is a clone of WhatsApp developed using Vue.js as part of the Boolean bootcamp. This web application replicates the core functionalities of WhatsApp, allowing users to manage contacts, send and receive messages, and interact with a user-friendly chat interface.
 
 ## Features
 
@@ -25,11 +25,11 @@ Follow these steps to run the project locally:
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/gulliWeb/boolzapp-vue-project.git
+    git clone https://github.com/GulliWeb/vue-boolzap.git
     ```
 2. Navigate to the project folder:
     ```bash
-    cd boolzapp
+    cd vue-boolzap
     ```
 3. Open the `index.html` file in your browser to start using the application.
 
@@ -52,5 +52,5 @@ This project is licensed under the MIT License. Feel free to use and modify it a
 ## Future Improvements
 
 - Add a backend for real-time messaging
-- Implement AI messaging
+- Implement AI for response messages 
 - Add support for multimedia messages (images, videos)
