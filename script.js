@@ -44,13 +44,11 @@ const { createApp } = Vue;
         }
     },
 
+    // Computed per mostrare solo i contatti che iniziano per la stessa lettera digitata dall'utente nella search bar con aggiornamento reattivo
     computed: {
-        // Computed per mostrare solo i contatti che iniziano per la stessa lettere digitata dall'utente nella search bar con aggiornamento reattivo
         filteredContacts() {
             if (this.searchContacts) {
-                return this.contacts.filter(contact => 
-                    contact.name.toLowerCase().startsWith(this.searchContacts.toLowerCase())
-                );
+                return this.contacts.filter(contact => contact.name.toLowerCase().startsWith(this.searchContacts.toLowerCase()));
             } else {
                 return this.contacts;
             }
@@ -105,8 +103,8 @@ const { createApp } = Vue;
             }
         },
 
+        // Funzione che estrae solo l'ora e i minuti dalla stringa di data
         formatTime(dateString) {
-            // Estrai solo l'ora e i minuti dalla stringa di data
             const timePart = dateString.split(' ')[1];  
             const [hours, minutes] = timePart.split(':');  
             return `${hours.padStart(2, '0')}:${minutes.padStart(2, '0')}`;  
@@ -130,5 +128,3 @@ const { createApp } = Vue;
  }).mount('#app')
 
  // CONSEGNA ORE 18
-
-
