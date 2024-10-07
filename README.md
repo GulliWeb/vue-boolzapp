@@ -21,7 +21,7 @@
 
 ### 🎥 Demo Video
 
-Watch the project demo here: [VueBoolZapp](https://vimeo.com/manage/videos/1017164291)
+Watch the project demo here: [VueBoolzApp](https://vimeo.com/manage/videos/1017164291)
 
 ## 🚀 Installation
 
