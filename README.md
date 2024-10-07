@@ -21,7 +21,7 @@ Vue BoolzApp is a clone of WhatsApp developed using Vue.js as part of the Boolea
 
 ## Demo Video
 
-You can watch a demonstration of the Vue BoolzApp in action on Vimeo: [Watch Video](https://vimeo.com/your_video_id)
+You can watch a demonstration of the Vue BoolzApp in action on Vimeo: [Watch Video](https://vimeo.com/your_video_id](https://vimeo.com/1017164291?share=copy#t=0))
 
 ## Installation
 
